@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>niftywindows</id>
+    <version>0.9.3.1</version>
+    <packageSourceUrl>https://github.com/LiteracyFanatic/niftywindows</packageSourceUrl>
+    <owners>Jordan Cannon</owners>
+    <title>NiftyWindows</title>
+    <authors>Oliver Pfeiffer</authors>
+    <projectUrl>http://www.enovatic.org/products/niftywindows/introduction/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/LiteracyFanatic/niftywindows/src/tools/NiftyWindows.png</iconUrl>
+    <copyright>2004-2005 Enovatic-Solutions</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>http://www.enovatic.org/products/niftywindows/download/</projectSourceUrl>
+    <docsUrl>http://www.enovatic.org/products/niftywindows/features/</docsUrl>
+    <tags>niftywindows</tags>
+    <summary>NiftyWindows adds to the built-in features of the window manger to increase ease of use.</summary>
+    <description>
+The main intention of NiftyWindows is the provision of an easy user control of all basic window interactions like dragging, resizing, maximizing, minimizing, closing and many others. The idea is to perform the central interactions with a single hand without any need to press some tricky key combinations like other tools or window managers enforce.
+
+One of the mostly unused mouse features is the press and drag of the RIGHT_BUTTON. The area of every window is tiled in a virtual 9-cell grid with three columns and rows. The center cell is the largest one and you can grab and move a window around by clicking and holding it with the right mouse button. The other eight corner cells are used to resize a resizable window in the same manner.
+
+The full set of features supported by NiftyWindows is documented [here](http://www.enovatic.org/products/niftywindows/features/).
+
+The following package parameters are supported:
+
+* `/ToolTipFeedback` - Show a tool tip when a NiftyWindows operation is being used. On by default.
+* `/AutoSuspend` - Disable NiftyWindows when an application is running fullscreen. On by default.
+* `/FocusFollowsMouse` - Automatically focus windows when the mouse passes over them. Off by default.
+* `/Left` - Enable left mouse button features. On by default.
+* `/Middle` - Enable middle mouse button features. On by default.
+* `/Right` - Enable right mouse button features. On by default.
+* `/Fourth` - Enable fourth mouse button features. On by default.
+* `/Fifth` - Enable fifth mouse button features. On by default.
+
+As an example: `choco install niftywindows --params "/AutoSuspend /ToolTipFeedback /Left /Right"`.
+
+If no parameters are passed, the default values will be used. When values
+are supplied, the rest of the features will be disabled. Features can be
+turned on or off at any point from the taskbar menu.
+    </description>
+    <releaseNotes>http://www.enovatic.org/products/niftywindows/changelog/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
