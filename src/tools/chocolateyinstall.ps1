@@ -31,15 +31,17 @@ Get-ChocolateyUnzip $fileLocation "$toolsDir\NiftyWindows-0.9.3.1"
 
 $startMenuPrograms = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs"
 $targetPath = "$toolsDir\NiftyWindows-0.9.3.1\NiftyWindows.exe"
+$iconPath = "$toolsDir\NiftyWindows.ico"
 
-$shell = New-Object -ComObject "WScript.Shell"
-$shortcut = $shell.CreateShortcut("$startMenuPrograms\NiftyWindows.lnk")
-$shortcut.TargetPath = $targetPath
-$shortcut.Save()
+Install-ChocolateyShortcut `
+    -shortcutFilePath "$startMenuPrograms\NiftyWindows.lnk" `
+    -targetPath $targetPath `
+    -iconLocation $iconPath
 
-$shortcut = $shell.CreateShortcut("$startMenuPrograms\Startup\NiftyWindows.lnk")
-$shortcut.TargetPath = $targetPath
-$shortcut.Save()
+Install-ChocolateyShortcut `
+    -shortcutFilePath "$startMenuPrograms\Startup\NiftyWindows.lnk" `
+    -targetPath $targetPath `
+    -iconLocation $iconPath
 
 "[Main]
 AutoSuspend=$($settings['AutoSuspend'])
