@@ -37,9 +37,7 @@ The following package parameters are supported:
 
 As an example: `choco install niftywindows --params "/AutoSuspend /ToolTipFeedback /Left /Right"`.
 
-If no parameters are passed, the default values will be used. When values
-are supplied, the rest of the features will be disabled. Features can be
-turned on or off at any point from the taskbar menu.
+If no parameters are passed, the default values will be used. When values are supplied, the rest of the features will be disabled. Features can be turned on or off at any point from the taskbar menu.
     </description>
     <releaseNotes>http://www.enovatic.org/products/niftywindows/changelog/</releaseNotes>
   </metadata>
