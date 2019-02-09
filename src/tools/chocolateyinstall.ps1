@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileLocation = Join-Path $toolsDir 'NiftyWindows-0.9.3.1.zip'
+$zipLocation = Join-Path $toolsDir 'NiftyWindows-0.9.3.1.zip'
 
 $pp = Get-PackageParameters
 
@@ -27,10 +27,11 @@ if ($pp.Count) {
     }
 }
 
-Get-ChocolateyUnzip $fileLocation "$toolsDir\NiftyWindows-0.9.3.1"
+$installPath = "$env:ChocolateyToolsLocation\NiftyWindows-0.9.3.1"
+Get-ChocolateyUnzip $zipLocation $installPath
 
 $startMenuPrograms = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs"
-$targetPath = "$toolsDir\NiftyWindows-0.9.3.1\NiftyWindows.exe"
+$targetPath = "$installPath\NiftyWindows.exe"
 $iconPath = "$toolsDir\NiftyWindows.ico"
 
 Install-ChocolateyShortcut `
@@ -42,6 +43,8 @@ Install-ChocolateyShortcut `
     -shortcutFilePath "$startMenuPrograms\Startup\NiftyWindows.lnk" `
     -targetPath $targetPath `
     -iconLocation $iconPath
+
+$configFilePath = "$installPath\NiftyWindows.ini"
 
 "[Main]
 AutoSuspend=$($settings['AutoSuspend'])
@@ -57,6 +60,6 @@ MiddleMouseButton=$($settings['Middle'])
 RightMouseButton=$($settings['Right'])
 FourthMouseButton=$($settings['Fourth'])
 FifthMouseButton=$($settings['Fifth'])" |
-    Out-File (Join-Path $toolsDir "NiftyWindows-0.9.3.1\NiftyWindows.ini")
+    Out-File $configFilePath
 
 Invoke-Expression $targetPath
