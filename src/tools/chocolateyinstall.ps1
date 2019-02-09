@@ -53,7 +53,6 @@ FocusFollowsMouse=$($settings['FocusFollowsMouse'])
 [Visual]
 ToolTipFeedback=$($settings['ToolTipFeedback'])
 [UpdateCheck]
-LastUpdateCheck=01
 [MouseHooks]
 LeftMouseButton=$($settings['Left'])
 MiddleMouseButton=$($settings['Middle'])
