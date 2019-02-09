@@ -62,4 +62,6 @@ FourthMouseButton=$($settings['Fourth'])
 FifthMouseButton=$($settings['Fifth'])" |
     Out-File $configFilePath
 
+Install-BinFile "NiftyWindows" $targetPath
+
 Invoke-Expression $targetPath

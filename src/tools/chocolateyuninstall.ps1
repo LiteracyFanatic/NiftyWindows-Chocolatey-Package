@@ -18,3 +18,5 @@ foreach ($shortcut in $shortcuts) {
         Remove-Item $shortcut
     }
 }
+
+Uninstall-BinFile "NiftyWindows"
