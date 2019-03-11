@@ -59,7 +59,7 @@ MiddleMouseButton=$($settings['Middle'])
 RightMouseButton=$($settings['Right'])
 FourthMouseButton=$($settings['Fourth'])
 FifthMouseButton=$($settings['Fifth'])" |
-    Out-File $configFilePath
+    Out-File $configFilePath -Force
 
 Install-BinFile "NiftyWindows" $targetPath
 
