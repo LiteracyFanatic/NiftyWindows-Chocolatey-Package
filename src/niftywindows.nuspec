@@ -11,7 +11,7 @@
     <projectUrl>http://www.enovatic.org/products/niftywindows/introduction/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/LiteracyFanatic/niftywindows/src/tools/NiftyWindows.png</iconUrl>
     <copyright>2004-2005 Enovatic-Solutions</copyright>
-    <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>http://www.enovatic.org/products/niftywindows/download/</projectSourceUrl>
     <docsUrl>http://www.enovatic.org/products/niftywindows/features/</docsUrl>
